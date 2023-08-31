@@ -44,7 +44,7 @@
                             <a class="nav-link font-weight-bold" style="letter-spacing: 1px; font-size: 14px;" href="#contact">COLECCIONES</a>
                         </li>
                         <li class="nav-item mx-2 h6">
-                            <a class="nav-link font-weight-bold" style="letter-spacing: 1px; font-size: 14px;"><router-link to="/admin">Admin Panel</router-link></a>
+                            <a style="letter-spacing: 1px; font-size: 14px;"><router-link class="nav-link font-weight-bold active" to="/admin">Admin Panel</router-link></a>
                         </li>
                     </ul>
                     <!-- Login / Sign up -->

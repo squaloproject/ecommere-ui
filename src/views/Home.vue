@@ -7,12 +7,11 @@
       <div class="container py-5">
         <header class="text-left text-white py-5">
           <h3 class="mb-4 rounded" id="heading">
-            <a href="#start-shopping" class="bg-white" px-2 py-2 rounded>Start shopping</a>
+            <a href="#start-shopping" class="bg-white" px-2 py-2 rounded></a>
           </h3>
-          <p class="lead mb-0 bg-dark p-1 rounded">Squalo Ecommerce</p>
+          <p class="lead mb-0 p-1 rounded"></p>
         </header>
       </div>
-      <hr />
     </div>
     <div class="container">
       <div class="row">
@@ -58,7 +57,7 @@ export default {
 }
 
 #background-div {
-  background: url("https://images.theconversation.com/files/246673/original/file-20181121-161621-tvw7sv.jpg?ixlib=rb-1.1.0&rect=49%2C199%2C5550%2C2775&q=45&auto=format&w=1356&h=668&fit=crop");
+  background: url("../assets/back.png");
 }
 
 #heading {
