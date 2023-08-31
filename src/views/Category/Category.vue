@@ -1,4 +1,7 @@
 <template>
+    <header>
+        <Navbar />
+    </header>
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -17,28 +20,19 @@
 </template>
 
 <script>
-import axios from "axios";
 import CategoryBox from '../../components/Category/CategoryBox.vue';
+import Navbar from '@/components/Navbar.vue'
 export default {
     name: "Category",
-    components: { CategoryBox },
+    props: ["categories"],
+    components: { CategoryBox, Navbar },
     data() {
         return {
             baseURL: "https://limitless-lake-55070.herokuapp.com",
-            categories: [],
         };
     },
-    methods: {
-        async getCategories() {
-            await axios
-                .get(`${this.baseURL}/category/`)
-                .then((res) => (this.categories = res.data))
-                .catch((err) => console.log(err));
-        },
-    },
-    mounted() {
-        this.getCategories();
-    }
+    methods: {},
+    mounted() { },
 };
 </script>
   

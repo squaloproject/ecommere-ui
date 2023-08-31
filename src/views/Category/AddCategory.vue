@@ -1,4 +1,7 @@
 <template>
+    <header>
+        <Navbar />
+    </header>
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -32,7 +35,10 @@
 <script>
 import axios from "axios";
 import sweetalert from 'sweetalert';
+import Navbar from '@/components/Navbar.vue'
 export default {
+    name: 'AddCategory',
+    components: { Navbar },
     data() {
         return {
             categoryName: "",

@@ -1,16 +1,39 @@
 <template>
-  <Navbar />
-  <router-view />
+  <router-view :baseURL="baseURL" :categories="categories" :products="products">
+  </router-view>
 </template>
 
 <script>
-import Navbar from '@/components/Navbar.vue';
+import axios from 'axios';
 export default {
-    name: "App",
-    components: { Navbar },
-    data() {
-        return {};
-    },
+  name: "App",
+  components: {},
+  data() {
+    return {
+      baseURL: "https://limitless-lake-55070.herokuapp.com/",
+      products: [],
+      categories: []
+    }
+  },
+  methods: {
+    // Api call to get the categories
+    async fetchData() {
+      await axios.get(this.baseURL + "category/")
+        .then(res => {
+          this.categories = res.data
+        }).catch((err) => console.log('err', err));
+
+      // Api call to get the products
+      await axios.get(this.baseURL + "products/")
+        .then(res => {
+          this.products = res.data
+        }).catch((err) => console.log('err', err));
+
+    }
+  },
+  mounted() {
+    this.fetchData();
+  }
 };
 </script>
 
@@ -18,5 +41,6 @@ export default {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 </style>
