@@ -15,7 +15,8 @@
                     <div class="form-group">
                         <label>Categoría</label>
                         <select class="form-control" v-model="categoryId" required>
-                            <option v-for="category in categories" :key="category.id" :value="category.id">{{ category.categoryName }}</option>
+                            <option v-for="category in categories" :key="category.id" :value="category.id">{{
+                                category.categoryName }}</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -44,7 +45,7 @@
 
 <script>
 import axios from 'axios';
-//import swal from 'sweetAlert';
+import swal from 'sweetalert';
 import Navbar from '@/components/Navbar.vue';
 export default {
     name: "AddProduct",
@@ -71,15 +72,15 @@ export default {
             };
 
             axios.post(this.baseURL + "product/add", newProduct)
-            .then(() => {
-                this.$router.push({name: 'Product'});
-                /*swal({
-                    text: "Producto añadido",
-                    icon: "success"
-                })*/
-            }).catch((err) => {
-                console.log("err", err);
-            })
+                .then(() => {
+                    this.$router.push({ name: 'Product' });
+                    swal({
+                        text: "Producto añadido",
+                        icon: "success"
+                    })
+                }).catch((err) => {
+                    console.log("err", err);
+                })
         }
     }
 };

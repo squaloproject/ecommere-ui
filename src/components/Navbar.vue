@@ -43,15 +43,15 @@
                         <li class="nav-item mx-2 h6">
                             <a class="nav-link font-weight-bold" style="letter-spacing: 1px; font-size: 14px;" href="#contact">COLECCIONES</a>
                         </li>
+                        <li class="nav-item mx-2 h6">
+                            <a class="nav-link font-weight-bold" style="letter-spacing: 1px; font-size: 14px;"><router-link to="/admin">Admin Panel</router-link></a>
+                        </li>
                     </ul>
                     <!-- Login / Sign up -->
                     <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
                         <a href="#login" class="text-dark">Login</a>
                         <a href="#signup" class="text-white text-decoration-none px-3 py-1 rounded-4"
                             style="background-color: #253D5B;">Registrarse</a>
-                            <router-link to="admin">
-                                <a class="text-dark text-decoration-none">Admin Panel</a>
-                            </router-link>
                     </div>
                 </div>
             </div>

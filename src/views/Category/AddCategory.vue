@@ -21,7 +21,7 @@
                         <textarea type="text" class="form-control" v-model="description"></textarea>
                     </div>
                     <div class="form-group">
-                        <label>Imagen</label>
+                        <label>Imagen URL</label>
                         <input type="text" class="form-control" v-model="imageUrl">
                     </div>
                     <button type="button" class="btn btn-primary" @click="addCategory">Enviar</button>
@@ -34,8 +34,8 @@
 
 <script>
 import axios from "axios";
-//import swal from 'sweetAlert';
-import Navbar from '@/components/Navbar.vue'
+import swal from 'sweetalert';
+import Navbar from '@/components/Navbar.vue';
 export default {
     name: 'AddCategory',
     components: { Navbar },
@@ -66,10 +66,10 @@ export default {
                 },
             })
                 .then(() => {
-                    /*swal({
+                    swal({
                         text: "Categoría añadida con éxito",
                         icon: "success",
-                    });*/
+                    });
                 })
                 .catch((err) => {
                     console.log(err);

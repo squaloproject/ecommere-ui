@@ -11,10 +11,11 @@ const routes = [
     name: 'About',
     component: () => import('../views/About.vue')
   },
+  // Admin pages
   {
-    path: '/admin/category/add',
-    name: 'AddCategory',
-    component: () => import('../views/Category/AddCategory.vue')
+    path: '/admin',
+    name: 'Admin',
+    component: () => import('../views/Admin.vue')
   },
   {
     path: '/admin/category',
@@ -22,9 +23,14 @@ const routes = [
     component: () => import('../views/Category/Category.vue')
   },
   {
-    path: '/admin',
-    name: 'Admin',
-    component: () => import('../views/Admin.vue')
+    path: '/admin/category/add',
+    name: 'AddCategory',
+    component: () => import('../views/Category/AddCategory.vue')
+  },
+  {
+    path: '/admin/category/:id',
+    name: 'EditCategory',
+    component: () => import('../views/Category/EditCategory.vue')
   },
   {
     path: '/admin/product',
@@ -35,6 +41,11 @@ const routes = [
     path: '/admin/product/add',
     name: 'AddProduct',
     component: () => import('../views/Product/AddProduct.vue')
+  },
+  {
+    path: '/admin/product/:id',
+    name: 'EditProduct',
+    component: () => import('../views/Product/EditProduct.vue')
   }
 ]
 

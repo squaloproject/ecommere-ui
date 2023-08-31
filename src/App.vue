@@ -1,5 +1,6 @@
 <template>
-  <router-view :baseURL="baseURL" :categories="categories" :products="products">
+  <router-view v-if="categories && products" :baseURL="baseURL" :categories="categories" :products="products"
+    @fetchData="fetchData">
   </router-view>
 </template>
 
@@ -11,8 +12,8 @@ export default {
   data() {
     return {
       baseURL: "https://limitless-lake-55070.herokuapp.com/",
-      products: [],
-      categories: []
+      products: null,
+      categories: null
     }
   },
   methods: {

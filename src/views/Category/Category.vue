@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import Navbar from '@/components/Navbar.vue'
+import Navbar from '@/components/Navbar.vue';
 import CategoryBox from '@/components/Category/CategoryBox.vue';
 export default {
     name: "Category",

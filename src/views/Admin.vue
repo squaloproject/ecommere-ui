@@ -1,4 +1,7 @@
 <template>
+    <header>
+        <Navbar />
+    </header>
     <router-link :to="{name: 'Category'}">
         <button class="btn btn-primary btn-lg">Mis Categorías</button>
     </router-link>
@@ -9,9 +12,10 @@
 </template>
 
 <script>
+import Navbar from "@/components/Navbar.vue"
 export default {
     name: "Admin",
-    components: {},
+    components: { Navbar },
     data() {
 
     }
