@@ -24,7 +24,7 @@ export default {
         }).catch((err) => console.log('err', err));
 
       // Api call to get the products
-      await axios.get(this.baseURL + "products/")
+      await axios.get(this.baseURL + "product/")
         .then(res => {
           this.products = res.data
         }).catch((err) => console.log('err', err));

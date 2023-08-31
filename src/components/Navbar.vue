@@ -49,6 +49,9 @@
                         <a href="#login" class="text-dark">Login</a>
                         <a href="#signup" class="text-white text-decoration-none px-3 py-1 rounded-4"
                             style="background-color: #253D5B;">Registrarse</a>
+                            <router-link to="admin">
+                                <a class="text-dark text-decoration-none">Admin Panel</a>
+                            </router-link>
                     </div>
                 </div>
             </div>

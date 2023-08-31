@@ -5,9 +5,9 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <h3 class="pt-3">Mis Categorías</h3>
+                <h3 class="pt-3">Mis categorías</h3>
                 <router-link :to="{ name: 'AddCategory' }">
-                    <button class="btn btn-secondary">Añadir Categoría</button>
+                    <button class="btn btn-secondary" style="float: right">Añadir nueva categoría</button>
                 </router-link>
             </div>
         </div>
@@ -20,19 +20,16 @@
 </template>
 
 <script>
-import CategoryBox from '../../components/Category/CategoryBox.vue';
 import Navbar from '@/components/Navbar.vue'
+import CategoryBox from '@/components/Category/CategoryBox.vue';
 export default {
     name: "Category",
     props: ["categories"],
-    components: { CategoryBox, Navbar },
+    components: { Navbar, CategoryBox },
     data() {
         return {
             baseURL: "https://limitless-lake-55070.herokuapp.com",
         };
-    },
-    methods: {},
-    mounted() { },
+    }
 };
 </script>
-  

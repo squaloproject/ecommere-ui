@@ -34,7 +34,7 @@
 
 <script>
 import axios from "axios";
-import sweetalert from 'sweetalert';
+//import swal from 'sweetAlert';
 import Navbar from '@/components/Navbar.vue'
 export default {
     name: 'AddCategory',
@@ -66,10 +66,10 @@ export default {
                 },
             })
                 .then(() => {
-                    sweetalert({
+                    /*swal({
                         text: "Categoría añadida con éxito",
                         icon: "success",
-                    });
+                    });*/
                 })
                 .catch((err) => {
                     console.log(err);
@@ -78,6 +78,5 @@ export default {
     },
 };
 </script>
-
-<style scoped></style>
+  
   
