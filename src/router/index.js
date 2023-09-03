@@ -6,11 +6,6 @@ const routes = [
     name: 'Home',
     component: () => import('../views/Home.vue')
   },
-  {
-    path: '/about',
-    name: 'About',
-    component: () => import('../views/About.vue')
-  },
   // Admin pages
   {
     path: '/admin',
@@ -46,7 +41,20 @@ const routes = [
     path: '/admin/product/:id',
     name: 'EditProduct',
     component: () => import('../views/Product/EditProduct.vue')
+  },
+  // Product page
+  {
+    path: '/product/show/:id',
+    name: 'ShowDetails',
+    component: () => import('../views/Product/ShowDetails.vue')
+  },
+  // Category page
+  {
+    path: '/category/show/:id',
+    name: 'ListProducts',
+    component: () => import('../views/Category/ListProducts.vue')
   }
+
 ]
 
 const router = createRouter({
@@ -55,3 +63,4 @@ const router = createRouter({
 })
 
 export default router
+  

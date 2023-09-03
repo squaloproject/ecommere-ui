@@ -51,7 +51,7 @@
                     <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
                         <a href="#login" class="text-dark">Login</a>
                         <a href="#signup" class="text-white text-decoration-none px-3 py-1 rounded-4"
-                            style="background-color: #253D5B;">Registrarse</a>
+                            style="background-color: #0c141f;">Registrarse</a>
                     </div>
                 </div>
             </div>

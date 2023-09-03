@@ -1,5 +1,5 @@
 <template>
-  <router-view v-if="categories && products" :baseURL="baseURL" :categories="categories" :products="products"
+  <router-view v-if="categories && products" :baseURL="baseURL" :categories="categories" :products="products" style="min-height: 60vh;"
     @fetchData="fetchData">
   </router-view>
 </template>

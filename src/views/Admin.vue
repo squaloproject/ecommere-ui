@@ -2,20 +2,26 @@
     <header>
         <Navbar />
     </header>
-    <router-link :to="{name: 'Category'}">
-        <button class="btn btn-primary btn-lg">Mis Categorías</button>
-    </router-link>
+    <div class="container p-4">
+        <router-link :to="{name: 'Category'}">
+            <button class="btn btn-primary btn-lg">Mis Categorías</button>
+        </router-link>
 
-    <router-link :to="{name: 'Product'}">
-        <button class="btn btn-primary btn-lg">Mis Productos</button>
-    </router-link>
+        <router-link :to="{name: 'Product'}">
+            <button class="btn btn-primary btn-lg">Mis Productos</button>
+        </router-link>
+    </div>
+    <footer>
+        <Footer />
+    </footer>
 </template>
 
 <script>
-import Navbar from "@/components/Navbar.vue"
+import Navbar from "@/components/Navbar.vue";
+import Footer from '@/components/Footer.vue';
 export default {
     name: "Admin",
-    components: { Navbar },
+    components: { Navbar, Footer },
     data() {
 
     }

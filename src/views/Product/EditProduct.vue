@@ -40,15 +40,19 @@
             <div class="col-3"></div>
         </div>
     </div>
+    <footer>
+        <Footer />
+    </footer>
 </template>
 
 <script>
 import axios from 'axios';
 import swal from 'sweetalert';
 import Navbar from '@/components/Navbar.vue';
+import Footer from '@/components/Footer.vue';
 export default {
     name: "EditProduct",
-    components: { Navbar },
+    components: { Navbar, Footer },
     data() {
         return {
             category: null,

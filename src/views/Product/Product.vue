@@ -17,15 +17,19 @@
             </div>
         </div>
     </div>
+    <footer>
+        <Footer />
+    </footer>
 </template>
 
 <script>
 import Navbar from '@/components/Navbar.vue';
 import ProductBox from '@/components/ProductBox.vue';
+import Footer from '@/components/Footer.vue';
 export default {
     name: "Product",
     props: ["products"],
-    components: { Navbar, ProductBox },
+    components: { Navbar, ProductBox, Footer },
     data() {
         return {
             baseURL: "https://limitless-lake-55070.herokuapp.com",
@@ -33,3 +37,4 @@ export default {
     }
 };
 </script>
+  

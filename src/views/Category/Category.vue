@@ -17,15 +17,19 @@
             </div>
         </div>
     </div>
+    <footer>
+        <Footer />
+    </footer>
 </template>
 
 <script>
 import Navbar from '@/components/Navbar.vue';
 import CategoryBox from '@/components/Category/CategoryBox.vue';
+import Footer from '@/components/Footer.vue';
 export default {
     name: "Category",
     props: ["categories"],
-    components: { Navbar, CategoryBox },
+    components: { Navbar, CategoryBox, Footer },
     data() {
         return {
             baseURL: "https://limitless-lake-55070.herokuapp.com",
