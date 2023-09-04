@@ -4,7 +4,7 @@
         <div class="container">
             <!-- Logo -->
             <router-link to="/">
-                <img src="../assets/logo.png" class="navbar-brand" style="width: 85px;" alt="Squalo Project Logo">
+                <img src="../assets/logo.png" class="navbar-brand">
             </router-link>
             <!-- Toggle Btn -->
             <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
@@ -16,42 +16,51 @@
                 aria-labelledby="offcanvasNavbarLabel">
                 <!-- SideBar Header -->
                 <div class="offcanvas-header text-dark border-bottom">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                        Colecciones Squalo
-                    </h5>
+                    <img src="../assets/logo.png" class="navbar-brand offcanvas-title" id="offcanvasNavbarLabel">
                     <button type="button" class="btn-close btn-close-dark shadow-none" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
                 <!-- SideBar Body -->
                 <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
-                    <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                    <ul class="navbar-nav justify-content-center align-items-start fs-5 flex-grow-1 pe-3 mt-3">
                         <li class="nav-item mx-2 h6">
                             <!--<router-link :to="Category" class="nav-link"></router-link>-->
-                            <a class="font-weight-bold text-decoration-none text-dark" style="letter-spacing: 1px; font-size: 14px;" href="#about">HOMBRE</a>
-                        </li>
-                        <li class="nav-item mx-3 h6">
-                            <!--<router-link :to="Category" class="nav-link"></router-link>-->
-                            <a class="font-weight-bold text-decoration-none text-dark" style="letter-spacing: 1px; font-size: 14px;" href="#about">MUJER</a>
+                            <a class="nav-link font-weight-bold text-decoration-none text-dark"
+                                style="letter-spacing: 1px; font-size: 14px;" href="#about">HOMBRE</a>
                         </li>
                         <li class="nav-item mx-2 h6">
                             <!--<router-link :to="Category" class="nav-link"></router-link>-->
-                            <a class="font-weight-bold text-decoration-none text-dark" style="letter-spacing: 1px; font-size: 14px;" href="#about">NIÑO</a>
+                            <a class="nav-link font-weight-bold text-decoration-none text-dark"
+                                style="letter-spacing: 1px; font-size: 14px;" href="#about">MUJER</a>
                         </li>
                         <li class="nav-item mx-2 h6">
-                            <a class="nav-link font-weight-bold" style="letter-spacing: 1px; font-size: 14px;" href="#services">NOVEDADES</a>
+                            <!--<router-link :to="Category" class="nav-link"></router-link>-->
+                            <a class="nav-link font-weight-bold text-decoration-none text-dark"
+                                style="letter-spacing: 1px; font-size: 14px;" href="#about">NIÑO</a>
                         </li>
                         <li class="nav-item mx-2 h6">
-                            <a class="nav-link font-weight-bold" style="letter-spacing: 1px; font-size: 14px;" href="#contact">COLECCIONES</a>
+                            <a class="nav-link font-weight-bold" style="letter-spacing: 1px; font-size: 14px;"
+                                href="#services">NOVEDADES</a>
                         </li>
                         <li class="nav-item mx-2 h6">
-                            <a style="letter-spacing: 1px; font-size: 14px;"><router-link class="nav-link font-weight-bold active" to="/admin">Admin Panel</router-link></a>
+                            <a class="nav-link font-weight-bold" style="letter-spacing: 1px; font-size: 14px;"
+                                href="#contact">COLECCIONES</a>
                         </li>
                     </ul>
                     <!-- Login / Sign up -->
-                    <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
-                        <a href="#login" class="text-dark">Login</a>
-                        <a href="#signup" class="text-white text-decoration-none px-3 py-1 rounded-4"
-                            style="background-color: #0c141f;">Registrarse</a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Dropdown for browse -->
+                        <!-- Dropdown for account -->
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarAccount"
+                                    data-bs-toggle="dropdown">Cuenta</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarAccount">
+                                    <router-link class="dropdown-item" :to="{ name: 'Signup' }">Crear cuenta</router-link>
+                                    <router-link class="dropdown-item" :to="{ name: 'Signin' }">Iniciar sesión</router-link>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -60,3 +69,15 @@
     <router-view />
 </template>
   
+<style scoped>
+.navbar-brand {
+    width: 85px;
+}
+
+@media screen and (max-width: 575px) {
+    .navbar-brand {
+        width: 60px;
+        margin-left: 10px;
+    }
+}
+</style>
