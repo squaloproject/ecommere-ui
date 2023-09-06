@@ -54,6 +54,7 @@ const routes = [
     name: 'ListProducts',
     component: () => import('../views/Category/ListProducts.vue')
   },
+  // Signup and signin
   {
     path: '/signup',
     name: 'Signup',
@@ -63,6 +64,12 @@ const routes = [
     path: '/signin',
     name: 'Signin',
     component: () => import('../views/Signin.vue')
+  },
+  // WishList
+  {
+    path: '/wishlist',
+    name: 'WishList',
+    component: () => import('../views/Product/WishList.vue')
   }
 
 ]

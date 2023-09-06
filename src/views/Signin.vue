@@ -33,24 +33,27 @@ import swal from 'sweetalert';
 import Navbar from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
 export default {
+    props: ["baseURL"],
     name: "Signin",
     components: { Navbar, Footer },
     data() {
         return {
             email: null,
-            password: null
+            password: null,
         };
     },
     methods: {
         async signin(e) {
-            e.preventDefault;
+            e.preventDefault();
             const body = {
                 email: this.email,
-                password: this.password
+                password: this.password,
             };
-            await axios.post(`${this.baseURL}user/signIn`, body)
-                .then(() => {
+            await axios
+                .post(`${this.baseURL}user/signIn`, body)
+                .then((res) => {
                     this.$router.replace("/");
+                    localStorage.setItem("token", res.data.token);
                     swal({
                         text: "Inicio de sesión correcto",
                         icon: "success"

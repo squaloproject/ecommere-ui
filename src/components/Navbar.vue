@@ -56,8 +56,13 @@
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarAccount"
                                     data-bs-toggle="dropdown">Cuenta</a>
                                 <div class="dropdown-menu" aria-labelledby="navbarAccount">
-                                    <router-link class="dropdown-item" :to="{ name: 'Signup' }">Crear cuenta</router-link>
-                                    <router-link class="dropdown-item" :to="{ name: 'Signin' }">Iniciar sesión</router-link>
+                                    <router-link v-if="token" class="dropdown-item"
+                                        :to="{ name: 'WishList' }">Favoritos</router-link>
+                                    <router-link v-if="!token" class="dropdown-item" :to="{ name: 'Signup' }">Crear
+                                        cuenta</router-link>
+                                    <router-link v-if="!token" class="dropdown-item" :to="{ name: 'Signin' }">Iniciar
+                                        sesión</router-link>
+                                    <a class="dropdown-item" v-if="token" href="#" @click="signout">Cerrar sesión</a>
                                 </div>
                             </li>
                         </ul>
@@ -69,6 +74,27 @@
     <router-view />
 </template>
   
+<script>
+export default {
+    name: "Navbar",
+    components: {},
+    data() {
+        return {
+            token: null,
+        }
+    },
+    methods: {
+        signout() {
+            localStorage.removeItem("token");
+            this.token = null;
+        }
+    },
+    mounted() {
+        this.token = localStorage.getItem("token");
+    }
+};
+</script>
+
 <style scoped>
 .navbar-brand {
     width: 85px;
@@ -79,5 +105,4 @@
         width: 60px;
         margin-left: 10px;
     }
-}
-</style>
+}</style>
