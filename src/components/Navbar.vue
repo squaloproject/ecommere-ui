@@ -48,10 +48,9 @@
                         </li>
                     </ul>
                     <!-- Login / Sign up -->
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!-- Dropdown for browse -->
+                    <div class="d-flex flex-lg-row justify-content-around align-items-center" id="navbarSupportedContent">
                         <!-- Dropdown for account -->
-                        <ul class="navbar-nav mr-auto">
+                        <ul class="navbar-nav d-flex flex-row">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarAccount"
                                     data-bs-toggle="dropdown">Cuenta</a>
@@ -64,6 +63,12 @@
                                         sesión</router-link>
                                     <a class="dropdown-item" v-if="token" href="#" @click="signout">Cerrar sesión</a>
                                 </div>
+                            </li>
+                            <li class="nav-item d-flex align-items-center ml-2 mr-2">|</li>
+                            <li class="nav-item ml-1">
+                                <router-link class="text-dark" :to="{ name: 'Cart' }">
+                                    <i class="bi bi-bag" style="font-size: 22px"></i>
+                                </router-link>
                             </li>
                         </ul>
                     </div>
@@ -105,4 +110,5 @@ export default {
         width: 60px;
         margin-left: 10px;
     }
-}</style>
+}
+</style>
